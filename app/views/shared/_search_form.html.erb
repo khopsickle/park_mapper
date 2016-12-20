@@ -1,6 +1,7 @@
 <%= form_tag parks_path, method: 'get' do %>
-  <%= label_tag :query, 'Enter your zipcode' %>
-  <%= text_field_tag :query %>
+  <%= label_tag :query, 'Enter a zipcode' %>
+  <%= text_field_tag :query, params[:query] %>
 
+  <%= check_box_tag :show_grades, :eval %>
   <%= submit_tag "Search" %>
 <% end %>

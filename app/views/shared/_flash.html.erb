@@ -1,0 +1,13 @@
+<% flash.each do |message_type, messages| %>
+  <% if messages.is_a?(Array) %>
+    <ul>
+      <% messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <ul>
+      <li><%= messages %></li>
+    </ul>
+  <% end %>
+<% end %>
