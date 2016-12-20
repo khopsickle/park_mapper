@@ -1,3 +1,7 @@
 <h1>Park Index</h1>
 
-<p>nothing here :o</p>
+<%= render partial: 'shared/search_form' %>
+
+<ul>
+  <%= render @parks unless params[:query].nil? %>
+</ul>
