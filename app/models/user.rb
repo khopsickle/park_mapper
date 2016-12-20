@@ -18,4 +18,8 @@ class User < ApplicationRecord
     generate_token
     save!
   end
+
+  def add_favorite(park)
+
+  end
 end

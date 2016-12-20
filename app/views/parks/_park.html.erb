@@ -1,3 +1,5 @@
 <li>
-  <%= link_to park.parkname, park %> (<span class=<%= colorize(park.evaluation) %>><%= park.evaluation %></span>) <%= link_to %>
+  <%= link_to park.parkname, park %> (<span class=<%= colorize(park.evaluation) %>><%= park.evaluation %></span>)
+  | 
+  <%= favorite_link(park) %>
 </li>
