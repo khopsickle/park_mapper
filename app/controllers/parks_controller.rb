@@ -1,7 +1,10 @@
 class ParksController < ApplicationController
 
   def index
-    @parks = Park.search(params[:query]).eval_present.descending
+    @parks = Park.search(params[:query])
+    filter_params.each do |key, value|
+      @parks = @parks.public_send(key) if value.present?
+    end
   end
 
   def show
@@ -19,6 +22,10 @@ class ParksController < ApplicationController
 
     def query_params
       params.permit(:query)
+    end
+
+    def filter_params
+      params.slice(:eval_present, :desc_grades)
     end
 
     def save_list(list)

@@ -9,8 +9,12 @@ class Park < ApplicationRecord
     end
   end
 
-  def self.descending
+  def self.desc_grades
     order("evaluation DESC")
+  end
+
+  def self.desc_acreage
+    order("acreage DESC")
   end
 
   def self.eval_present

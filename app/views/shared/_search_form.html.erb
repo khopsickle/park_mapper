@@ -2,6 +2,18 @@
   <%= label_tag :query, 'Enter a zipcode' %>
   <%= text_field_tag :query, params[:query] %>
 
-  <%= check_box_tag :show_grades, :eval %>
   <%= submit_tag "Search" %>
+
+  <p>
+    <%= check_box_tag :eval_present, true %>
+    <%= label_tag :eval_present, 'only parks with grades' %>
+  </p>
+  <p>
+    <%= check_box_tag :desc_acreage, true %>
+    <%= label_tag :desc_acreage, 'sort by descending acreage' %>
+  </p>
+  <p>
+    <%= check_box_tag :desc_grades, true %>
+    <%= label_tag :desc_grades, 'sort by descending grades' %>
+  </p>
 <% end %>
