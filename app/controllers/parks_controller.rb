@@ -30,7 +30,7 @@ class ParksController < ApplicationController
     end
 
     def filter_params
-      params.slice(:eval_present, :desc_grades)
+      params.slice(:eval_present, :desc_grades, :desc_acreage)
     end
 
     def save_list(list)

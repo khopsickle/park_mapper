@@ -2,6 +2,10 @@
 
 <p><%= favorite_link(@park) if signed_in_user? %></p>
 
+<%#= image_tag map_url_builder(@park) %>
+
+<%= render partial: 'shared/google_map', locals: { park: @park } %>
+
 <ul>
   <li>Acreage: <%= @park.acreage %></li>
   <li>Park Type: <%= @park.parktype %></li>
