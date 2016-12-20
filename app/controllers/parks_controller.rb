@@ -40,6 +40,6 @@ class ParksController < ApplicationController
 
     # stop the app from pulling more data
     def locked
-      true
+      false
     end
 end
