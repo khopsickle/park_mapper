@@ -1,5 +1,8 @@
 class ParksController < ApplicationController
 
+  before_action :require_admin, only: [:refresh]
+  skip_before_action :require_login, only: [:index, :show]
+
   def index
     @parks = Park.search(params[:query])
     filter_params.each do |key, value|
@@ -12,6 +15,7 @@ class ParksController < ApplicationController
   end
 
   def refresh
+    Park.delete_all
     @park_list = Soda.new.park_list
     @evaluation_list = Soda.new.evaluation_list
     save_list(@park_list)

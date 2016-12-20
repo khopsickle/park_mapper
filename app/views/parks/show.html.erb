@@ -1,11 +1,11 @@
 <h1><%= @park.parkname %></h1>
 
-<p><%= favorite_link(@park) %></p>
+<p><%= favorite_link(@park) if signed_in_user? %></p>
 
 <ul>
   <li>Acreage: <%= @park.acreage %></li>
   <li>Park Type: <%= @park.parktype %></li>
   <li>Supervisor District: <%= @park.supdist %></li>
   <li>Zipcode: <%= @park.zipcode %></li>
-  <li>Grade: <%= @park.evaluation %></li>
+  <li>Grade: <%= display_grade(@park.evaluation) %></li>
 </ul>

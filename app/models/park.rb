@@ -20,6 +20,4 @@ class Park < ApplicationRecord
   def self.eval_present
     where.not('evaluation' => nil)
   end
-
-
 end

@@ -11,4 +11,7 @@ module ParksHelper
     str.html_safe
   end
 
+  def display_grade(evaluation)
+    evaluation ? evaluation : "n/a"
+  end
 end
