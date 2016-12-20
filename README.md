@@ -1,66 +1,15 @@
 # Park Mapper
 
-Viking Code School hackathon app for finding parks near you.
+[Viking Code School](https://vikingcodeschool.com) hackathon app created by @khopsickle for finding parks in the San Francisco area.
 
-Main Features:
-  - user sets a zip code location
-    - display a list of nearby parks
-      - order based on grades/area
-        - not everything will match up
-      - select the ones you want to show up
-      - saveable as a POI Marker
-        - contains a key (labelable: home, work, school, etc)
-      - display a link to that zip code with park locations
+## Usage
 
-Extra Features
-  - select a park
-    - select assets to display
-    - generate a map of that park with the assets labeled
+Check out the [live site](http://park-mapper.herokuapp.com/) and create an account to save your favorite parks..
 
-Implementation:
-  - User signs up:
-    - username
-    - email
-    - first name
-    - zip code
+Or visit the [Park index](http://park-mapper.herokuapp.com/parks) to search without creating an account.
 
-  - Parks
-    - zip code
-    - name
-    - acreage (convert?)
-    - park id
-    - evaluation (match data by downcased name)
+Enter a zip code to start searching, sort and filter results based on park grades or acreage or leave the search box blank to get a full list.
 
-      *optional*
-    - assets (match by property id)
+## Credits
 
-call api (quarterly?)
-store the data
-
-
-[{"acreage":"0.83",
-to_f
-float
-
-"location_1":{"type":"Point","coordinates":[-122.43995903,37.73956697]},
-type string
-coordinates string
-
-"parkid":"2",
-to_i
-integer
-
-"parkname":"BERKELEY WAY OPEN SPACE",
-titlize
-string
-
-"parktype":"Neighborhood Park or Playground",
-string
-
-"supdist":"8",
-to_i
-integer
-
-"zipcode":"94131"}
-to_i
-integer
+Park Mapper uses [San Francisco Open Data](https://data.sfgov.org), [Soda-Ruby](https://github.com/socrata/soda-ruby), and [Google Maps API](https://developers.google.com/maps/).
