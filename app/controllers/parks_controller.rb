@@ -1,7 +1,5 @@
 class ParksController < ApplicationController
 
-  before_action :locked
-
   def refresh
     @park_list = Soda.new.park_list
     @evaluation_list = Soda.new.evaluation_list
@@ -36,10 +34,4 @@ class ParksController < ApplicationController
     end
   end
 
-  private
-
-    # stop the app from pulling more data
-    def locked
-      false
-    end
 end
