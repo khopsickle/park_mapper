@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'parks#refresh'
+  root 'parks#index'
   resources :users
   resources :parks
-  get 'refresh', to: 'parks#refresh'
+  # get 'refresh', to: 'parks#refresh'
 end
