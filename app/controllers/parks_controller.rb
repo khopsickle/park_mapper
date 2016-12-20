@@ -1,6 +1,7 @@
 class ParksController < ApplicationController
 
   before_action :require_admin, only: [:refresh]
+
   skip_before_action :require_login, only: [:index, :show]
 
   def index
