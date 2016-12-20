@@ -1,4 +1,5 @@
 class Park < ApplicationRecord
+  has_many :favorites
 
   def self.search(query)
     if query == "" || query.nil?

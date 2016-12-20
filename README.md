@@ -29,7 +29,7 @@ Implementation:
     - name
     - acreage (convert?)
     - park id
-    - evaluation (match data by downcased name/supdist)
+    - evaluation (match data by downcased name)
 
       *optional*
     - assets (match by property id)
