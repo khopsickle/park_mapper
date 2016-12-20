@@ -18,6 +18,13 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    def require_admin
+      unless current_user == User.first
+        flash[:error] = "You do not have permission to do that."
+        redirect_to login_path
+      end
+    end
+
     def signed_in_user?
       !!current_user
     end

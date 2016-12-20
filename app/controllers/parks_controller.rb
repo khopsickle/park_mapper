@@ -1,5 +1,7 @@
 class ParksController < ApplicationController
 
+  before_action :require_admin, only: [:refresh]
+
   def index
     @parks = Park.search(params[:query])
     filter_params.each do |key, value|
