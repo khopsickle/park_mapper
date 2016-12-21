@@ -4,7 +4,11 @@
 
 <%#= image_tag map_url_builder(@park) %>
 
-<%= render partial: 'shared/google_map', locals: { park: @park } %>
+<% if @park.location_coordinates %>
+  <%= render partial: 'shared/google_map', locals: { park: @park } %>
+<% else %>
+  <p>No map data available for this park. :(</p>
+<% end %>
 
 <ul>
   <li>Acreage: <%= @park.acreage %></li>
