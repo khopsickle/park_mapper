@@ -1,6 +1,6 @@
 # Park Mapper
 
-[Viking Code School](https://vikingcodeschool.com) hackathon app created by @khopsickle for finding parks in the San Francisco area.
+[Viking Code School](https://vikingcodeschool.com) hackathon app created by [khopsickle](https://github.com/khopsickle/park_mapper) for finding parks in the San Francisco area.
 
 ## Usage
 
