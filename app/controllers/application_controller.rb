@@ -25,6 +25,10 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    def signed_in_redirect
+      redirect_to current_user if signed_in_user?
+    end
+
     def signed_in_user?
       !!current_user
     end
@@ -36,11 +40,6 @@ class ApplicationController < ActionController::Base
       end
     end
     helper_method :current_user
-
-    # def is_current_user?(user)
-    #   user == current_user
-    # end
-    # helper_method :is_current_user?
 
     def sign_in(user)
       user.regenerate_auth_token

@@ -4,7 +4,7 @@
 
 ## Usage
 
-Check out the [live site](http://park-mapper.herokuapp.com/) and create an account to save your favorite parks..
+Check out the [live site](http://park-mapper.herokuapp.com/) and create an account to save your favorite parks.
 
 Or visit the [Park index](http://park-mapper.herokuapp.com/parks) to search without creating an account.
 

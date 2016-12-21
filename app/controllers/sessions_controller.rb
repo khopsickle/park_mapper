@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  before_action :signed_in_redirect, only: [:create, :new]
+
   skip_before_action :require_login, only: [:new, :create]
 
   def new
@@ -10,7 +12,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
       sign_in(@user)
-      flash[:success] = "Signed In"
+      flash[:success] = "Signed In."
       redirect_to @user
     else
       flash[:danger] = "Invalid email or password."

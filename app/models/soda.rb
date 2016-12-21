@@ -15,13 +15,4 @@ class Soda
     JSON.parse(@client.get('urx2-yj58', {'$select' => "park, park_site_score, supervisor_district"}).to_json)
   end
 
-  def jsonify
-    to_json
-  end
-
-  def save_data(list)
-    list.each do |entry|
-      entry
-    end
-  end
 end

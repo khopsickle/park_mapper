@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :find_user, only: [:show]
-
+  before_action :signed_in_redirect, only: [:create, :new]
   skip_before_action :require_login, only: [:new, :create]
 
   def new

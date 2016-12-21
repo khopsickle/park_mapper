@@ -34,7 +34,6 @@ class ParksController < ApplicationController
     end
 
     def save_list(list)
-      Park.destroy_all
       list.each do |entry|
         unless entry["location_1"]
           entry["location_1"] = { "type" => nil }
