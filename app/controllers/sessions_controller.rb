@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Signed In"
       redirect_to @user
     else
-      flash[:error] = "Invalid email or password."
+      flash[:danger] = "Invalid email or password."
       render :new
     end
   end

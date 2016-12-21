@@ -5,7 +5,7 @@ class FavoritesController < ApplicationController
     if @favorite.save
       flash[:success] = "Park favorited."
     else
-      flash[:error] = "Unable to favorite."
+      flash[:danger] = "Unable to favorite."
     end
     redirect_to :back
   end
@@ -15,7 +15,7 @@ class FavoritesController < ApplicationController
     if @favorite && @favorite.delete
       flash[:success] = "Park unfavorited."
     else
-      flash[:error] = "Unable to remote favorite."
+      flash[:danger] = "Unable to remote favorite."
     end
     redirect_to :back
   end

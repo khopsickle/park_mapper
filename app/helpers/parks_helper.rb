@@ -2,11 +2,11 @@ module ParksHelper
   def colorize(score)
     str = ""
     case score
-    when 90..100 then str += "green"
-    when 80..89 then str += "blue"
-    when 70..79 then str += "yellow"
-    when 60..69 then str += "orange"
-    when 1..59 then str += "red"
+    when 90.0..100.0 then str += "text-success"
+    when 80.0..89.9 then str += "text-info"
+    when 70.0..79.9 then str += "text-warning"
+    when 60.0..69.9 then str += "text-danger"
+    when 1..59.9 then str += "text-muted"
     end
     str.html_safe
   end

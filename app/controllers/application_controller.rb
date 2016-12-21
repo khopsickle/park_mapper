@@ -13,14 +13,14 @@ class ApplicationController < ActionController::Base
 
     def require_login
       unless signed_in_user?
-        flash[:error] = "You must be signed in!"
+        flash[:danger] = "You must be signed in!"
         redirect_to login_path
       end
     end
 
     def require_admin
       unless current_user == User.first
-        flash[:error] = "You do not have permission to do that."
+        flash[:danger] = "You do not have permission to do that."
         redirect_to login_path
       end
     end
