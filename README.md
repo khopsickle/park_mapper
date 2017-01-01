@@ -15,7 +15,7 @@ A mini park finder for San Francisco built in Rails by [khopsickle](https://gith
 ## Highlights
 
 - [Soda-Ruby](https://github.com/socrata/soda-ruby) accesses the [San Francisco Open Data API](https://data.sfgov.org) to pull and save relevant park data to a PostgreSQL database
-- Figaro for credentials management
+- [Figaro](https://github.com/laserlemon/figaro) for credentials management
 - ActiveRecord queries are built to filter results on Park index page
 - [Google Maps API](https://developers.google.com/maps/) to map parks
 
