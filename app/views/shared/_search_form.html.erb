@@ -1,8 +1,7 @@
-<%= form_tag parks_path, method: 'get' do %>
-  <%= label_tag :query, 'Enter a zipcode' %>
-  <%= text_field_tag :query, params[:query] %>
+<%= form_tag parks_path, method: 'get', class: "form-inline" do %>
+  <%= text_field_tag :query, params[:query], placeholder: 'Enter a zipcode', class: "form-control" %>
 
-  <%= submit_tag "Search" %>
+  <%= submit_tag "Search", class: "form-control" %>
 
   <p>
     <%= check_box_tag :eval_present, true %>

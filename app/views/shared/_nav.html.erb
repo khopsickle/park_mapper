@@ -1,11 +1,8 @@
 <% if signed_in_user? %>
-  <%= link_to "Log Out", logout_path, method: :delete %>
-  |
-  <%= link_to "Find Parks", parks_path %>
-  |
-  <%= link_to "My Parks", current_user %>
+  <%= link_to "Log Out", logout_path, method: :delete, class: "btn btn-default navbar-btn" %>
+  <%= link_to "Find Parks", parks_path, class: "btn btn-default navbar-btn" %>
+  <%= link_to "My Parks", current_user, class: "btn btn-default navbar-btn" %>
 <% else %>
-  <%= link_to "Login", login_path %>
-  |
-  <%= link_to "Sign Up", new_user_path %>
+  <%= link_to "Login", login_path, class: "btn btn-default navbar-btn" %>
+  <%= link_to "Sign Up", new_user_path, class: "btn btn-default navbar-btn" %>
 <% end %>

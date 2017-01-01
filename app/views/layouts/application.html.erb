@@ -9,9 +9,21 @@
   </head>
 
   <body>
-    <%= render partial: 'shared/flash' %>
-    <%= render partial: 'shared/nav' %>
-    <hr>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <%= render partial: 'shared/flash' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <%= render partial: 'shared/nav' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

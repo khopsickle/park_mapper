@@ -1,12 +1,10 @@
-<li>
-  <%= link_to park.parkname, park %>
-  |
-  <span class=<%= colorize(park.evaluation) %>><%= display_grade(park.evaluation) %></span>
-  |
-  <%= "#{park.acreage} acres" %>
-
+<tr>
+  <td><%= link_to park.parkname, park %></td>
+  <td><span class=<%= colorize(park.evaluation) %>><%= display_grade(park.evaluation) %></span></td>
+  <td><%= "#{park.acreage}" %></td>
   <% if signed_in_user? %>
-    |
-    <%= favorite_link(park) %>
+    <td>
+      <%= favorite_link(park) %>
+    </td>
   <% end %>
-</li>
+</tr>

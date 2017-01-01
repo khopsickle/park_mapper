@@ -1,7 +1,25 @@
-<h1>Park Index</h1>
+<div class="col-sm-12">
+  <h1>Park Index</h1>
 
-<%= render partial: 'shared/search_form' %>
+  <%= render partial: 'shared/search_form' %>
 
-<ul>
-  <%= render @parks unless params[:query].nil? %>
-</ul>
+  <% unless params[:query].nil? %>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Park Name</th>
+          <th>Grade</th>
+          <th>Acres</th>
+          <% if signed_in_user? %>
+            <th>
+              Add to Favorites
+            </th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @parks %>
+      </tbody>
+    </table>
+  <% end %>
+</div>

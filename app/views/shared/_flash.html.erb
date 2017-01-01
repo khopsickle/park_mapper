@@ -1,12 +1,12 @@
 <% flash.each do |message_type, messages| %>
   <% if messages.is_a?(Array) %>
-    <ul class=<%= "bg-#{message_type}" %>>
+    <ul class="alert alert-<%= message_type %> list-unstyled" %>
       <% messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
   <% else %>
-    <ul class=<%= "bg-#{message_type}" %>>
+    <ul class="alert alert-<%= message_type %> list-unstyled" %>
       <li><%= messages %></li>
     </ul>
   <% end %>
