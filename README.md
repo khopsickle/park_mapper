@@ -2,6 +2,8 @@
 
 A mini park finder for San Francisco built in Rails by [khopsickle](https://github.com/khopsickle/).
 
+![ss](public/screenshot.png?raw=true "Screenshot of project")
+
 ## Deployed
 
 - See it live on [Heroku](https://park-mapper.herokuapp.com/), may take a few seconds to load the inactive dyno.
